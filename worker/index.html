@@ -17,26 +17,41 @@
 <body>
   <div id="board" class="board"></div>
   <div class="info">
+    <p id="check-msg">CHECK!!</p>
+    <p id="game-over-msg"></p>
     <p>
-    <strong>Profundidad de búsqueda:</strong>
-    <select id="search-depth">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3" selected>3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
+      <strong>Profundidad de búsqueda:</strong>
+      <select id="search-depth">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <span id="thinking">Pensando...</span>
     </p>
     <p>
-      <strong>Posiciones evaluadas:</strong> <span id="position-count"></span>
+      <strong>Posiciones evaluadas:</strong> <span id="position-count">0</span>
     </p>
     <p>
-      <strong>Tiempo:</strong> <span id="time"></span>
+      <strong>Tiempo:</strong> <span id="time">0s</span>
     </p>
     <p>
-      <strong>Posiciones/segundo:</strong> <span id="positions-per-s"></span>
+      <strong>Posiciones/segundo:</strong> <span id="positions-per-s">0</span>
     </p>
     <div id="move-history" class="move-history"></div>
+    <div class="flex">
+      <div>
+        <button id="reset">Nuevo juego</button>
+        <select id="select-color">
+          <option value="white" selected>Blancas</option>
+          <option value="black">Negras</option>
+        </select>
+      </div>
+      <div>
+        <button id="undo">Deshacer</button>
+      </div>
+    </div>
   </div>
 
 
@@ -44,7 +59,8 @@
   <script type="text/javascript" src="js/libs/jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="js/libs/chess.min.js"></script>
   <script type="text/javascript" src="js/libs/chessboard-0.3.0.min.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
+
+  <script type="text/javascript" src="js/board.js"></script>
 </body>
 
 </html>
